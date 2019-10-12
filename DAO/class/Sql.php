@@ -9,19 +9,19 @@ class Sql extends PDO{
 	}// FIM DA CONEXAO
 
 	//INSERINDO DADOS EM UM VETOR
-	private function setParams($statment, $parameters = array()){
+	private function setParams($statement, $parameters = array()){
 
 			foreach ($parameters as $key => $value) {
 
-				$this->setParam($key, $value);
+				$this->setParam($statement, $key, $value);
 
 			}
 	}// FIM DA INSERÇÃO
 
 	//INSERINDO DADOS EM 1 ITEM
-	private function setParam($statment, $key, $value){
+	private function setParam($statement, $key, $value){
 
-		$statment->bindParam($key, $value);
+		$statement->bindParam($key, $value);
 
 	}// FIM DA INSERÇÃO
 	
