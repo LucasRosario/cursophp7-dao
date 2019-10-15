@@ -58,6 +58,7 @@ class Usuario{
 		}
 	}
 
+<<<<<<< HEAD
 	//METODO PARA LISTAR TODOSO USUARIOS
 	public static function getList(){
 
@@ -106,6 +107,8 @@ class Usuario{
 	}
 
 
+=======
+>>>>>>> 4b3d03bfabba13fc42c3af5c42971642d0321b85
 	public function __toString(){
 
 		return json_encode(array(
@@ -118,6 +121,10 @@ class Usuario{
 
 	}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b3d03bfabba13fc42c3af5c42971642d0321b85
 }
 
   ?>

@@ -6,7 +6,7 @@ class Sql extends PDO{
 	//CONEXAO COM O BANCO
 	public function __construct(){
 			$this->conn = new PDO("mysql:host=localhost;dbname=dbphp7","root","");
-	}
+	}// FIM DA CONEXAO
 
 	//INSERINDO DADOS EM UM VETOR
 	private function setParams($statement, $parameters = array()){
@@ -16,14 +16,14 @@ class Sql extends PDO{
 				$this->setParam($statement, $key, $value);
 
 			}
-	}
+	}// FIM DA INSERÇÃO
 
 	//INSERINDO DADOS EM 1 ITEM
 	private function setParam($statement, $key, $value){
 
 		$statement->bindParam($key, $value);
 
-	}
+	}// FIM DA INSERÇÃO
 	
 	// Executa a Query dentro do banco de dados (BIND)
 	public function query($rawQuery, $params = array()){
@@ -36,7 +36,8 @@ class Sql extends PDO{
 
 		return $stmt;
 
-	}
+
+	} //FIM DA QUERY
 
 	//PROJETA DADOS DO BANCO (tratamento)
 	public function select($rawQuery, $params = array()):array{

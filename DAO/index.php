@@ -27,4 +27,11 @@ echo $root; */
 //echo $usuario;
 
 
+$root = new Usuario();
+
+$root->loadbyId(4);
+
+echo $root; 
+
+
 ?>
