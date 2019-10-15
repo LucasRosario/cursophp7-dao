@@ -51,7 +51,6 @@ INSERT INTO TB_USUARIOS VALUES (NULL,'emersonsilva','car456',NULL);
 INSERT INTO TB_USUARIOS VALUES (NULL,'mauriciobastos','car789',NULL);
 INSERT INTO TB_USUARIOS VALUES (NULL,'antoniobrandao','car0',NULL);
 
-<<<<<<< HEAD
 CREATE TABLE tb_usuarios(
 idusuario INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 deslogin VARCHAR(64) NOT NULL,
@@ -61,6 +60,15 @@ dtcadastro TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP()
 
 SELECT * FROM TB_USUARIOS;
 
-=======
-SELECT * FROM TB_USUARIOS;
->>>>>>> 4b3d03bfabba13fc42c3af5c42971642d0321b85
+CREATE PROCEDURE 'sp_usuarios_insert' (
+	pdeslogin VARCHAR(64),
+	pdessenha VARCHAR(256)
+)
+
+BEGIN
+	
+	INSERT tb_usuarios (deslogin, dessenha) VALUES (pdeslogin, pdessenha);
+
+	SELECT * FROM tb_usuarios WHERE idusuario = LAST_INSERT_ID();
+
+END
