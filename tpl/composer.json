@@ -1,0 +1,16 @@
+{
+    "name": "luketa/composer",
+    "description": "Aula de composer usando php 7",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Lucas Rosario",
+            "email": "lucasrosario1@hotmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "rain/raintpl": " >= 3.0.0",
+        "phpmailer/phpmailer": "~5.2"
+    }
+}
